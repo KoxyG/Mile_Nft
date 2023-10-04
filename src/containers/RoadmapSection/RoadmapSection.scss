@@ -1,0 +1,152 @@
+@import '../../App.scss';
+
+.roadmap-section {
+    padding: 60px 0;
+    min-height: 100vh;
+    background: rgba(43, 75, 30, 0.88);
+
+    .head {
+        margin-bottom: 40px;
+
+        .title-text {
+        }
+
+        .body-text {
+            max-width: 750px;
+            margin: 0 auto;
+        }        
+    }
+
+    .big-screen-content {
+        padding: 40px 60px;
+        margin-top: 60px;
+        background: rgba(3, 29, 4, 0.7);
+        border-radius: 400px 400px 20px 20px;
+        border: .6px solid #FF9510;
+        transition: all .5s;
+        
+        
+        .phases-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 10px 65px 10px;
+            margin-bottom: -40px;
+            position: relative;
+            z-index: 0;
+
+            .arc-container {
+                position: absolute;
+                z-index: -1;
+                left: 50%;
+                top: 45px;
+                transform: translateX(-50%);
+                width: calc(100% - 150px);
+                height: calc( 100% - 40px );
+                overflow: hidden;
+
+                .arc {
+                    height: calc(100% + 45px);
+                    width: 100%;
+                    border: 1px dashed #FF9510;
+                    border-radius: 50%/300px 300px 0 0;
+                }                
+            }
+
+            .phase-button-container {
+                height: 90px;
+                width: 90px;
+                border-radius: 50%;
+                background: linear-gradient(180deg, #FDE12D 0%, #FF7403 100%);
+                margin-top: 0;
+                padding: 1px;
+                cursor: pointer;
+                transition: all .6s;
+                
+                
+                &:hover {
+                    transform: scale(1.1);
+
+                }
+
+                .phase-button {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                    background-color: #163113;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .body-text {
+                        @include gradient-text();
+                    }
+                }
+
+                &:nth-child(1),
+                &:nth-child(4) {
+                    margin-top: 130px;
+                    transform: translateY(25px);
+                                    
+                    &:hover {
+                        transform: translateY(24px) scale(1.1);
+                    }
+
+                    &.active {
+                        transform: translateY(24px) scale(1.1);
+                    }
+                }
+                
+                &.active {
+                    background: #163113;
+                    transform: scale(1.1);
+                    border: 1px dashed #FF9510;
+                    padding: 5px;
+
+                    .phase-button {
+                        background: linear-gradient(180deg, #FDE12D 0%, #FF7403 100%);
+
+                        .body-text {            
+                            background: #0C2A08;
+                            background-clip: text;
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                        }
+
+                    }
+                }
+
+            }
+        }
+
+        .details-container {
+            margin: 0 auto;
+            max-width: 560px;
+
+            .title-text {
+                font-size: 30px;
+            }
+
+            .body-text {
+                font-size: 16px;
+                line-height: 34px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    .mobile-cards-container {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .roadmap-section {
+        .big-screen-content {
+            display: none;
+        }
+        .mobile-cards-container {
+            display: block;
+        }
+    }
+}

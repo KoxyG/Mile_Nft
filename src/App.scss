@@ -1,0 +1,91 @@
+@font-face {
+  font-family: Jungle Land;
+  src: url('./fonts/Jungle\ Land.ttf');
+}
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Basic&display=swap');
+
+.App {
+  text-align: center;
+  position: relative;
+  color: white;
+
+  .app-bg {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    bottom: 0;
+    z-index: -1;
+
+    .video-container{
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      right: 0;
+      left: 0;
+      overflow: hidden;
+      z-index: 0;
+
+      #home-head-video{
+          transform: scale(1.8);
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: auto;
+
+          @media (max-width: 1200px) {
+            height: 100%;
+            width: auto;
+          }
+          @media (max-width: 768px) {
+            height: auto;
+            width: 100%;
+          }
+    }
+  }
+
+  audio {
+    display: none;
+  }
+
+    img {
+      width: 100%;
+      z-index: 0;
+    }
+  }
+}
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@mixin gradient-text {
+  background: linear-gradient(180deg, #FDE12D 0%, #FF7403 100%);;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
