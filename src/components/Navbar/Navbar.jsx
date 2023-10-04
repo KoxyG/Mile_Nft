@@ -61,14 +61,14 @@ const Navbar = props =>{
             </ul>
             <div className = "icons">
                 <a
-                    href="https://discord.gg/xtKyEKjxxN"
+                    href="o"
                     rel="noopener noreferrer"
                     target="_blank" aria-label = 'discord-server-link'
                 >
                     <img src={DiscordIcon} alt="discord" />
                 </a>
                 <a
-                    href="https://twitter.com/GnomeSouls"
+                    href="u"
                     rel="noopener noreferrer"
                     target="_blank" aria-label = 'twitter-link'
                 >

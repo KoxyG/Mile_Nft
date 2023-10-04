@@ -13,17 +13,17 @@ const teamMembers = [
     {
         image: TeamMember1Image,
         name: "Thomas Elderman",
-        role: "Software engineer"
+        role: "Team lead"
     },
     {
         image: TeamMember2Image,
-        name: "Thomas Elderman",
+        name: "koxy",
         role: "Software engineer"
     },
     {
         image: TeamMember3Image,
         name: "Thomas Elderman",
-        role: "Software engineer"
+        role: "Project manager"
     },
 ]
 
